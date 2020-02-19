@@ -1,0 +1,16 @@
+import { ApiRequestOptions, ApiResponse } from '../airgram';
+import { ContactInput } from '../inputs';
+import { ImportedContactsUnion } from '../outputs';
+export interface ImportContactsParams {
+    contacts?: ContactInput[];
+}
+/**
+ * Adds new contacts or edits existing contacts by their phone numbers; contacts' user
+ * identifiers are ignored
+ * @param {Object} params
+ * @param {ContactInput[]} [params.contacts] - The list of contacts to import or
+ * edit; contacts' vCard are ignored and are not imported
+ * @param {ApiRequestOptions} options
+ * @returns {Promise<ApiResponse<ImportContactsParams, ImportedContactsUnion>>}
+ */
+export declare type importContacts = (params?: ImportContactsParams, options?: ApiRequestOptions) => Promise<ApiResponse<ImportContactsParams, ImportedContactsUnion>>;

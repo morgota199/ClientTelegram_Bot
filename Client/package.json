@@ -1,0 +1,16 @@
+{
+  "name": "telegram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/config": "0.0.36",
+    "airgram": "^3.0.2",
+    "config": "^3.2.5"
+  }
+}

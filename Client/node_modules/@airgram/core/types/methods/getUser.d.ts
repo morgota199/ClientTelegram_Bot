@@ -1,0 +1,14 @@
+import { ApiRequestOptions, ApiResponse } from '../airgram';
+import { UserUnion } from '../outputs';
+export interface GetUserParams {
+    userId?: number;
+}
+/**
+ * Returns information about a user by their identifier. This is an offline request
+ * if the current user is not a bot
+ * @param {Object} params
+ * @param {number} [params.userId] - User identifier
+ * @param {ApiRequestOptions} options
+ * @returns {Promise<ApiResponse<GetUserParams, UserUnion>>}
+ */
+export declare type getUser = (params?: GetUserParams, options?: ApiRequestOptions) => Promise<ApiResponse<GetUserParams, UserUnion>>;

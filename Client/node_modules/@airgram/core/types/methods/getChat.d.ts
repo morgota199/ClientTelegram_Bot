@@ -1,0 +1,14 @@
+import { ApiRequestOptions, ApiResponse } from '../airgram';
+import { ChatUnion } from '../outputs';
+export interface GetChatParams {
+    chatId?: number;
+}
+/**
+ * Returns information about a chat by its identifier, this is an offline request if
+ * the current user is not a bot
+ * @param {Object} params
+ * @param {number} [params.chatId] - Chat identifier
+ * @param {ApiRequestOptions} options
+ * @returns {Promise<ApiResponse<GetChatParams, ChatUnion>>}
+ */
+export declare type getChat = (params?: GetChatParams, options?: ApiRequestOptions) => Promise<ApiResponse<GetChatParams, ChatUnion>>;

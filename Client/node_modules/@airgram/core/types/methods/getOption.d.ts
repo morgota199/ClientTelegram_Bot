@@ -1,0 +1,14 @@
+import { ApiRequestOptions, ApiResponse } from '../airgram';
+import { OptionValueUnion } from '../outputs';
+export interface GetOptionParams {
+    name?: string;
+}
+/**
+ * Returns the value of an option by its name. (Check the list of available options
+ * on https://core.telegram.org/tdlib/options.) Can be called before authorization
+ * @param {Object} params
+ * @param {string} [params.name] - The name of the option
+ * @param {ApiRequestOptions} options
+ * @returns {Promise<ApiResponse<GetOptionParams, OptionValueUnion>>}
+ */
+export declare type getOption = (params?: GetOptionParams, options?: ApiRequestOptions) => Promise<ApiResponse<GetOptionParams, OptionValueUnion>>;

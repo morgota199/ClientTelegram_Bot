@@ -1,0 +1,16 @@
+import { ApiRequestOptions, ApiResponse } from '../airgram';
+import { TextUnion } from '../outputs';
+export interface GetPreferredCountryLanguageParams {
+    countryCode?: string;
+}
+/**
+ * Returns an IETF language tag of the language preferred in the country, which should
+ * be used to fill native fields in Telegram Passport personal details. Returns a 404
+ * error if unknown
+ * @param {Object} params
+ * @param {string} [params.countryCode] - A two-letter ISO 3166-1 alpha-2 country
+ * code
+ * @param {ApiRequestOptions} options
+ * @returns {Promise<ApiResponse<GetPreferredCountryLanguageParams, TextUnion>>}
+ */
+export declare type getPreferredCountryLanguage = (params?: GetPreferredCountryLanguageParams, options?: ApiRequestOptions) => Promise<ApiResponse<GetPreferredCountryLanguageParams, TextUnion>>;
